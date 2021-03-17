@@ -14,8 +14,8 @@ import org.junit.jupiter.api.BeforeAll;
         protected static final String LISTS = "lists";
         protected static final String CARDS = "cards";
 
-        protected static final String KEY = "7e6606fb2518eab25ca36a4303affa62";
-        protected static final String TOKEN = "58b045a9bb0cd922aea7482d193bee5099c2a352a2f2341950f2c5137f17aa88";
+        protected static String KEY;
+        protected static String TOKEN;
 
         protected static RequestSpecBuilder reqBuilder;
         protected static RequestSpecification reqSpec;
@@ -23,8 +23,8 @@ import org.junit.jupiter.api.BeforeAll;
         @BeforeAll
         public static void beforeAll(){
 
-            //KEY = System.getProperty("key");
-            //TOKEN = System.getProperty("token");
+            KEY = System.getProperty("key");
+            TOKEN = System.getProperty("token");
 
             reqBuilder = new RequestSpecBuilder();
             reqBuilder.addQueryParam("key", KEY);
